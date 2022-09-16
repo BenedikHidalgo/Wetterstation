@@ -4,11 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
     <title>Document</title>
 </head>
-<body>
-    <div class="chart">
-        <canvas id="myChart"></canvas>
+<body class="body" style="width:100%">
+    <!--Flex container-->
+    <div class="flexContainer">
+        <!--Menüleiste-->
+        <div class="flexItem">
+            <nav class="navbar menu navbar-custom">
+                <a class="navbar-brand" href="#" style="color:white">
+                    Filler-Bar
+                </a>
+            </nav>
+        </div>
+        <!--Graf-->
+        <div class="flexItem chart">
+            <canvas id="myChart" ></canvas>
+        </div>
+        <!--Footer-->
+        <div class="flexItem">
+            <nav class="navbar footer navbar-custom">
+                <a class="navbar-brand" href="#" style="color:white">
+                    Footer-Bar
+                </a>
+            </nav>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="main.js"></script>
