@@ -32,3 +32,79 @@
 .body {
     background-image: url(nacht.jpg);
 }
+
+.btn {
+    background: transparent;
+    color: white;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+a:link {
+    color:white;
+    text-decoration:none;
+}
+
+a:visited {
+    color: white;
+    text-decoration:none;
+}
+
+a:hover {
+    color: white;
+    text-decoration:none;
+}
+
+a:active {
+    color:white;
+    text-decoration:none;
+}
+
+.navbar-brand {
+    width:40%;
+}
+
+.nav-link {
+    padding:20px;
+    padding-left:30px;
+    padding-right:30px; 
+    border-style:solid;
+    border-width:1px;
+    border-color: gray;
+    border-radius:12px;
+}
+
+.last-link {
+    margin-right:300px;
+}
+
+.p {
+    margin-left:20px;
+    margin-top:250px;
+    color: black;
+    background-color:#A7A7A7;
+    width: 400px;
+    height:200px;
+    padding:10px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius:25px;
+    padding-top:30px;
+    padding-left:15px;
+}
+
+.value {
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.map {
+    margin-top:150px;
+    margin-left: 1300px;
+}
+
+.map2 {
+    margin-top:150px;
+    margin-left: 1300px;
+}
