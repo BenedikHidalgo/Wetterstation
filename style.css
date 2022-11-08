@@ -1,22 +1,42 @@
 .flexContainer {
     display:flex; 
-    flex-direction:column; 
-    position:relative;
-    flex-wrap:wrap;
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 70% 25%;
+    grid-template-rows: 400px 400px;
+    grid-gap: 25px;
+}
+
+.item-map {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.item-p {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.item-chart {
+    grid-row: 1 / 3 ;
 }
 
 .menu {
     position:absolute;
     width:100%;
-    height:10%;
+    height:5%;
 }
 
 .chart {
     background-color: #00000040;    
-    height:900px;
-    padding-left:100px;
-    padding-top:100px;
-    padding-right:100px;
+}
+
+.chart-container {
+    display:grid;
+    grid-template-rows: 750px 50px;
+    width:100%;
 }
 
 .footer {
@@ -66,7 +86,7 @@ a:active {
     width:40%;
 }
 
-.nav-link {
+.btn {
     padding:20px;
     padding-left:30px;
     padding-right:30px; 
@@ -74,19 +94,14 @@ a:active {
     border-width:1px;
     border-color: gray;
     border-radius:12px;
-}
-
-.last-link {
-    margin-right:300px;
+    margin:25px;
 }
 
 .p {
-    margin-left:20px;
-    margin-top:250px;
     color: black;
     background-color:#A7A7A7;
-    width: 400px;
-    height:200px;
+    width: 480px;
+    height:250px;
     padding:10px;
     font-family: 'Courier New', Courier, monospace;
     border-radius:25px;
@@ -97,14 +112,4 @@ a:active {
 .value {
     font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-.map {
-    margin-top:150px;
-    margin-left: 1300px;
-}
-
-.map2 {
-    margin-top:150px;
-    margin-left: 1300px;
 }

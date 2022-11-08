@@ -8,29 +8,26 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body class="body" style="width:100%">
+<body class="body">
+    <!--Menüleiste-->
+    <div class="d-flex flex-row align-items-center">
+        <a class="flex-grow-1" href="index.html"><img src="logo_nacht.jpg" href="index.html" alt="logo" width="150" height="150"></a>
+        <a class="btn" href="chart.html">Wetterverlauf</a>
+        <a class="btn" href="team.html">Unser Team</a>
+        <a class="btn" href="kontakt.html">Kontakt</a>
+    </div>
     <!--Flex container-->
-    <div class="flexContainer">
-        <!--Menüleiste-->
-        <div class="flexItem">
-            <nav class="navbar menu navbar-custom">
-                <a class="navbar-brand" href="#" style="color:white">
-                    Filler-Bar
-                </a>
-            </nav>
-        </div>
+    <div class="chart-container">
         <!--Graf-->
-        <div class="flexItem chart">
+        <div class="chart">
             <canvas id="myChart" ></canvas>
         </div>
         <!--Footer-->
-        <div class="flexItem">
-            <nav class="navbar footer navbar-custom">
-                <a class="navbar-brand" href="#" style="color:white">
-                    <button class="btn" id="temp" onclick="hiddenFunction(this.id)">Temperatur</button>
-                    <button class="btn" id="luft" onclick="hiddenFunction(this.id)">Luftfeucktigkeit</button>
-                </a>
-            </nav>
+        <div>
+            <a class="navbar-brand" href="#" style="color:white">
+                <button class="btn" id="temp" onclick="hiddenFunction(this.id)">Temperatur</button>
+                <button class="btn" id="luft" onclick="hiddenFunction(this.id)">Luftfeucktigkeit</button>
+            </a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

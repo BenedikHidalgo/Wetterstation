@@ -22,7 +22,8 @@ function getGradientTemp(ctx, chartArea) {
     height = chartHeight;
     gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
     gradient.addColorStop(0, "blue");
-    gradient.addColorStop(0.7, "orange");
+    gradient.addColorStop(0.4, "blue"); 
+    gradient.addColorStop(0.6, "orange");
     gradient.addColorStop(1, "red");
 
   return gradient;
