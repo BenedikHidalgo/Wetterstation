@@ -4,33 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/chartStyle.css">
     <title>Document</title>
 </head>
-<body class="body">
+<script src="js/background.js"></script>
+<body id="body">
     <!--Menüleiste-->
-    <div class="d-flex flex-row align-items-center">
-        <a class="flex-grow-1" href="index.html"><img src="logo_nacht.jpg" href="index.html" alt="logo" width="150" height="150"></a>
+    <div class="navbar">
+        <a class="flex-grow-1" href="index.html"><img src="img/logo_nacht.jpg" href="index.html" alt="logo" width="150" height="150"></a>
         <a class="btn" href="chart.html">Wetterverlauf</a>
         <a class="btn" href="team.html">Unser Team</a>
-        <a class="btn" href="kontakt.html">Kontakt</a>
+        <a class="btn" href="kontakt.php">Kontakt</a>
     </div>
     <!--Flex container-->
     <div class="chart-container">
         <!--Graf-->
         <div class="chart">
-            <canvas id="myChart" ></canvas>
+            <canvas id="myChart"></canvas>
         </div>
         <!--Footer-->
-        <div>
-            <a class="navbar-brand" href="#" style="color:white">
-                <button class="btn" id="temp" onclick="hiddenFunction(this.id)">Temperatur</button>
-                <button class="btn" id="luft" onclick="hiddenFunction(this.id)">Luftfeucktigkeit</button>
-            </a>
+        <div class="footer">
+            <button class="btn btnChart" id="temp" onclick="hiddenFunction(this.id)">Temperatur</button>
+            <button class="btn btnChart" id="luft" onclick="hiddenFunction(this.id)">Luftfeucktigkeit</button>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

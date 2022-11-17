@@ -98,9 +98,9 @@ const config = {
         responsive: true,
         maintainAspectRatio: false,
         scales: {
-            yAxis: {
+            y: {
                 grid: {
-                    color: "#FFFFFF40",
+                    color: "#FFFFFF80",
                     tickColor: "#FFFFFF",
                     borderColor: "#FFFFFF"
                 },
@@ -108,9 +108,9 @@ const config = {
                     color:"#FFFFFF"
                 },
             },
-            xAxis: {
+            x: {
                 grid: {
-                    color: "#FFFFFF40",
+                    color: "#FFFFFF80",
                     tickColor: "#FFFFFF",
                     borderColor: "#FFFFFF"
                 },

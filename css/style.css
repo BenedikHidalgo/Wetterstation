@@ -1,0 +1,97 @@
+/*
+extra small devices -> max 600px
+small devices -> min 600px
+medium devices -> min 768px
+large devices(laptops) -> min 992px
+extra large devices -> min 1200px
+*/
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    border: 1px solid red;
+}
+
+@media only screen and (max-width: 600px) {
+    div.item-chart {
+      display: none;
+    }
+}
+  
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+.info {
+    float:right;
+}
+
+.body {
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flexContainer {
+    display:flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+
+.menu {
+    position:absolute;
+    width:100%;
+    height:5%;
+}
+
+.footer {
+    position:absolute;
+    width:100%;
+    height:10%;
+}
+
+.navbar-custom {
+    background-color: #00000070;
+}
+
+a:link {
+    color:white;
+    text-decoration:none;
+}
+
+a:visited {
+    color: white;
+    text-decoration:none;
+}
+
+a:hover {
+    color: white;
+    text-decoration:none;
+}
+
+a:active {
+    color:white;
+    text-decoration:none;
+}
+
+.bg1 {
+    background-image: url(mittag.jpg);
+}
+
+.bg2 {
+    background-image: url(nacht.jpg);
+}

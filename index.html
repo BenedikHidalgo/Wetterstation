@@ -1,20 +1,35 @@
+        <!--Chart-->
+    <!--div class="row">
+        <div class="chart col-9">
+            <canvas id="myChart" ></canvas>
+        </div>
+        <div class="info col-3">
+            <p class="p">
+                Datum: <span class="value">12/10/2022</span><br>
+                Temperatur: <span class="value">27,0°C</span><br>
+                Luftfeuchtigkeit: <span class="value">78%</span><br>
+            </p>
+            <img src="map.jpg" alt="map" width="400">
+        </div>
+    </div-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/indexStyle.css">
+    <title>Startseite</title>
 </head>
+<script src="js/background.js"></script>
 <body class="body">
     <!--Menüleiste-->
-    <div class="d-flex flex-row align-items-center">
-        <a class="flex-grow-1" href="index.html"><img src="logo_nacht.jpg" href="index.html" alt="logo" width="150" height="150"></a>
+    <div class="navbar">
+        <a class="flex-grow-1" href="index.html"><img src="img/logo_nacht.jpg" href="index.html" alt="logo" width="150" height="150" style="image-rendering: crisp-edges"></a>
         <a class="btn" href="chart.html">Wetterverlauf</a>
         <a class="btn" href="team.html">Unser Team</a>
-        <a class="btn" href="kontakt.html">Kontakt</a>
+        <a class="btn" href="kontakt.php">Kontakt</a>
     </div>
     <!--Grid container-->   
     <div class="grid-container">
@@ -30,10 +45,10 @@
             </p>
         </div>
         <div class="item-map">
-            <img src="map.jpg" alt="map" width="540" height = "280">
+            <img src="img/map.jpg" alt="map" width="540" height = "280">
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
