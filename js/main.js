@@ -59,7 +59,7 @@ const data = {
     datasets: [
         {
             label: "Temperatur",
-            data: [0, 28, 20, 7, 16, 13, 25, 12, 22],
+            data: [14, 28, 20, 7, 16, 13, 25, 12, 22],
             //borderColor: "#FF0000",
             borderColor: function(context) {
                 const chart = context.chart;
