@@ -10,14 +10,11 @@
     <title>Document</title>
 </head>
 <script src="js/background.js"></script>
-<body class="body">
+<body class="body" style="">
     <!--Menüleiste-->
-    <div class="d-flex flex-row align-items-center">
-        <a class="flex-grow-1" href="index.html"><img id="logo" src="img/logo_nacht.jpg" href="index.html" alt="logo" width="150" height="150"></a>
-        <a class="btn" href="chart.html">Wetterverlauf</a>
-        <a class="btn" href="team.php">Unser Team</a>
-        <a class="btn" href="kontakt.html">Kontakt</a>
-    </div>
+    <?php
+        require_once "header.php";
+    ?>
     <?php
         if (isset($_POST["btn"])) {
             if (!empty($_POST["vorname"]) && !empty($_POST["nachname"]) && !empty($_POST["mail"]) && !empty($_POST["feedback"])) {
@@ -41,16 +38,16 @@
                 <form action="kontakt.php" method="POST">
                     <div class="form-container">
                         <label for="vorname" class="label">Vorname:</label>
-                        <input type="text" name="vorname" class="input col-3"><br>
+                        <input type="text" name="vorname" class="input bg"><br>
                         <label for="nachname" class="label">Nachname:</label>
-                        <input type="text" name="nachname" class="input"><br>
+                        <input type="text" name="nachname" class="input bg"><br>
                         <label for="mail" class="label">E-Mail:</label>
-                        <input type="text" name="mail" class="input"><br>
+                        <input type="text" name="mail" class="input bg"><br>
                         <label for="feedback"class="label">Feedback:</label>
-                        <textarea name="feedback" class="textarea" cols="30" rows="10"></textarea><br>
+                        <textarea name="feedback" class="textarea bg" cols="30" rows="10"></textarea><br>
                         <div class="btn-container">
-                            <button type="button" class="input-btn back-btn" name="btn"><a href="index.html">Zurück</a></button>
-                            <button type="submit" class="input-btn send-btn" name="btn">Senden!</button>
+                            <button type="button" class="input-btn back-btn bg" name="btn"><a href="index.php">Zurück</a></button>
+                            <button type="submit" class="input-btn send-btn bg" name="btn">Senden!</button>
                         </div>
                     </div>
                 </form>

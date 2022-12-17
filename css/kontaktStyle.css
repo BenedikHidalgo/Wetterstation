@@ -74,26 +74,30 @@
     justify-content: center;
     align-items: center;
     padding:15px;
+    background-color: #99999950;
 }
 
 /*Formular*/
+.bg {
+    background-color: #00000094;
+}
+
+.dark-bg {
+    background-color: #00000094;
+}
+
 .input {
     border-radius:20px;
-    background-color:#FFFFFF94;
     padding: 5px;
     width:250px;
 }
 
 .input-btn {
     border-radius:25px;
-    background-color:#FFFFFF94;
     padding: 4px;
     padding-left: 25px;
     padding-right: 25px;
-}
-
-.back-btn {
-    background-color: #00000020;
+    color: white;
 }
 
 .send-btn {
@@ -106,7 +110,6 @@
 
 .textarea {
     border-radius:20px;
-    background-color:#FFFFFF94; 
     padding: 5px;
     width:400px;
 }
@@ -139,4 +142,10 @@ a:hover {
 a:active {
     color:white;
     text-decoration:none;
+}
+
+.body {
+    width: 100%;
+    background-size: cover; 
+    background-position: center;
 }

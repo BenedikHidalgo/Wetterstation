@@ -10,16 +10,11 @@
     <title>Startseite</title>
 </head>
 <script src="js/background.js"></script>
-<body class="body" style="image-rendering: pixelated">
+<body class="body">
     <!--Menüleiste-->
-    <div class="topnav">
-        <div class="navbar">
-            <div class="menu" href="index.html"><img id="logo" src="img/logo_nacht.jpg" href="index.html" alt="logo" width="180" height="180" style="image-rendering: auto"></div>
-            <a class="btn" href="chart.html">Wetterverlauf</a>
-            <a class="btn" href="team.html">Unser Team</a>
-            <a class="btn" href="kontakt.php">Kontakt</a>
-        </div>
-    </div>
+    <?php
+        require_once "header.php"; 
+    ?>
     <!--Grid container-->   
     <div class="grid">
         <div class="grid-container">
@@ -33,9 +28,6 @@
                     Temperatur: <span class="value">27,0°C</span><br>
                     Luftfeuchtigkeit: <span class="value">78%</span><br>
                 </p>
-            </div>
-            <div class="item-map">
-                <img src="img/map.jpg" alt="map" width="540" height="280">
             </div>
         </div>
     </div>

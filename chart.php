@@ -10,22 +10,16 @@
     <title>Document</title>
 </head>
 <script src="js/background.js"></script>
-<body id="body">
+<body class="body">
     <!--Menüleiste-->
-    <div class="navbar">
-        <a class="flex-grow-1 imgLogo" href="index.html"><img id="logo" src="img/logo_nacht.jpg" href="index.html" alt="logo" width="150" height="150"></a>
-        <a class="btn" href="chart.html">Wetterverlauf</a>
-        <a class="btn" href="team.html">Unser Team</a>
-        <a class="btn" href="kontakt.php">Kontakt</a>
-    </div>
-    <!--Flex container-->
+    <?php
+        require_once "header.php";
+    ?>
+    <!--Grid container-->
     <div class="chart-container">
         <!--Graf-->
-        <div class="chart">
+        <div class="chart item-chart">
             <canvas id="myChart"></canvas>
-        </div>
-        <!--Footer-->
-        <div class="footer">
             <button class="btn btnChart" id="temp" onclick="hiddenFunction(this.id)">Temperatur</button>
             <button class="btn btnChart" id="luft" onclick="hiddenFunction(this.id)">Luftfeucktigkeit</button>
         </div>

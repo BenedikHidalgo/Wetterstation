@@ -1,8 +1,41 @@
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    .navbar a {
+        width: 100%;
+        margin: 1px;
+        padding:10px;
+    }
+
+    .navbar img {
+        margin: auto;
+        width: 120px;
+        height: 120px;
+        padding: 0px;
+    }
+
+    .item-chart {
+        height: 550px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+
+    .item-chart {
+        height: 750px;
+    }
+}
+
 /*Navbar*/
 .navbar {
     display:flex;
     flex-direction: row;
     align-items: center;
+}
+
+.menu {
+    flex-grow: 1;
 }
 
 .btn {
@@ -12,28 +45,23 @@
     border-width: 1px;
     border-radius: 12px;
     border-style:solid;
-    margin:20px;
-    display:flex;
+    margin:10px;
     justify-content: center;
     align-items: center;
     padding:15px;
-}
-
-.chart-container {
-    display:grid;
-    grid-template-rows: 750px 50px;
-    width:100%;
 }
 
 .navbar-brand {
     width:40%;
 }
 
-.footer {
-    display: flex;
-    flex-direction: row;
+.body {
+    width: 100%;
+    background-size: cover; 
+    background-position: center;
 }
 
-.btnChart {
-    padding:25px;
+* {
+    padding-left:5px;
+    padding-right:5px;
 }
