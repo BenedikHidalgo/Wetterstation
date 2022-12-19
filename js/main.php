@@ -1,3 +1,17 @@
+<?php
+$conn = new PDO("mysql: host=http://62.178.98.140/phpmyadmin/index.php; dbname=wetterstation;","admin","wetterstation22");
+
+$stmt_select = "SELECT Temperatur, Luftfeuchtigkeit FROM Daten;";
+$cmd_select = $conn->prepare($stmt_select);
+
+$cmd_select->execute();
+
+$temp_var = array(
+    while (($record = $cmd_select->fetch()) != FALSE) {
+        $record["Temperatur"];
+    }
+)
+echo '<script>
 //Funktion damit nur ein Dataset aktiv bleiben darf
 function hiddenFunction(clicked_id) {
 
@@ -13,7 +27,6 @@ function hiddenFunction(clicked_id) {
     }
 }
 
-//Gradient für Temp
 let width, height, gradient;
 function getGradientTemp(ctx, chartArea) {
   const chartWidth = chartArea.right - chartArea.left;
@@ -29,7 +42,6 @@ function getGradientTemp(ctx, chartArea) {
   return gradient;
 }
 
-//Gradient für Luft
 function getGradientLuft(ctx, chartArea) {
   const chartWidth = chartArea.right - chartArea.left;
   const chartHeight = chartArea.bottom - chartArea.top;
@@ -60,7 +72,6 @@ const data = {
         {
             label: "Temperatur",
             data: [14, 28, 20, 7, 16, 13, 25, 12, 22],
-            //borderColor: "#FF0000",
             borderColor: function(context) {
                 const chart = context.chart;
                 const {ctx, chartArea} = chart;
@@ -69,8 +80,8 @@ const data = {
                 }
                 return getGradientTemp(ctx, chartArea);
             },
-            pointRadius: "6",       //Punktgröße
-            tension: 0,             //Kurve
+            pointRadius: "6",
+            tension: 0,
             hidden: false,
         },
         {
@@ -133,5 +144,6 @@ const config = {
     }
 };
 
-
 const myChart = new Chart(document.getElementById("myChart"), config);
+</script>';
+?>
