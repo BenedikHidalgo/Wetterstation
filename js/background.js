@@ -12,7 +12,7 @@ window.onload=function() {
         imgLogo="img/logo_tag.jpg";
         bgColor="#00000094";
     } else {
-        img="img/rentiere.jpg";
+        img="img/rentier.png";
         bgColor="#00000094";
     }
     document.body.style.backgroundImage='url('+img +')';

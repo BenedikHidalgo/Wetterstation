@@ -31,8 +31,5 @@
             Benedik Hidalgo ebenfalls Stellverträtender CEO  
         </p>
     </div>
-    <?php
-        echo "<script>alert(\"TEST\");</script>";
-    ?>
 </body>
 </html>
