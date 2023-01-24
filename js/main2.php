@@ -9,9 +9,7 @@
     while (($record = $cmd_select->fetch()) != FALSE) {
         array_push($temp_arr, $record["Temperatur"]);
     }
-    print_r($temp_arr);
 ?>
-
 <script>
 //Funktion damit nur ein Dataset aktiv bleiben darf
 function hiddenFunction(clicked_id) {
@@ -30,29 +28,25 @@ function hiddenFunction(clicked_id) {
 
 let width, height, gradient;
 function getGradientTemp(ctx, chartArea) {
-  const chartWidth = chartArea.right - chartArea.left;
-  const chartHeight = chartArea.bottom - chartArea.top;
-    width = chartWidth;
-    height = chartHeight;
+    const chartWidth = chartArea.right - chartArea.left;
+    const chartHeight = chartArea.bottom - chartArea.top;
     gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
     gradient.addColorStop(0, "blue");
     gradient.addColorStop(0.4, "blue"); 
     gradient.addColorStop(0.5, "red");
     gradient.addColorStop(1, "red");
 
-  return gradient;
+    return gradient;
 }
 
 function getGradientLuft(ctx, chartArea) {
-  const chartWidth = chartArea.right - chartArea.left;
-  const chartHeight = chartArea.bottom - chartArea.top;
-    width = chartWidth;
-    height = chartHeight;
+    const chartWidth = chartArea.right - chartArea.left;
+    const chartHeight = chartArea.bottom - chartArea.top;
     gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
     gradient.addColorStop(0, "white");  
     gradient.addColorStop(1, "gray");
 
-  return gradient;
+    return gradient;
 }
 
 const labels = [
@@ -119,6 +113,8 @@ const config = {
                 ticks: {
                     color:"#FFFFFF"
                 },
+                suggestedMin: 21,
+                suggestedMax: 26,
             },
             x: {
                 grid: {
@@ -147,3 +143,4 @@ const config = {
 
 const myChart = new Chart(document.getElementById("myChart"), config);
 </script>
+
