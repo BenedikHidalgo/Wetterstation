@@ -1,3 +1,8 @@
+<?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +23,47 @@
     <?php
         if (isset($_POST["btn"])) {
             if (!empty($_POST["vorname"]) && !empty($_POST["nachname"]) && !empty($_POST["mail"]) && !empty($_POST["feedback"])) {
+                $to = "benedik.hidalgo@gmail.com";
+                $name = $_POST["vorname"];
+                $surname = $_POST["nachname"];
+                $from = $_POST["mail"];
+                $message = $_POST["feedback"];
+                $subject = "Contact Form Details";
+                $headers = "From:" . $from;
+                $result = mail($to,$subject,$message, $headers);
+                
+                require 'PHPMailer/src/Exception.php';
+                require 'PHPMailer/src/PHPMailer.php';
+                require 'PHPMailer/src/SMTP.php';
+
+                $mail = new PHPMailer(true);
+
+                try {
+                    //Send using SMTP
+                    $mail->isSMTP();
+                    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+                    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                    $mail->Username   = 'hidalgo.benedik@gmail.com';                     //SMTP username
+                    $mail->Password   = 'iffzrqzsxffuiarv';                               //SMTP password
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+                    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                
+                    $message = "Name: ".$name." ".$surname."<br>"."Email: ".$from."<br><br>".$message;
+
+                    //Recipients
+                    $mail->setFrom('from@example.com', 'Wetterstation-Feedback');
+                    $mail->addAddress('hidalgo.benedik@gmail.com');     //Add a recipient
+                
+                    //Content
+                    $mail->isHTML(true);                                  //Set email format to HTML
+                    $mail->Subject = 'Here is the subject';
+                    $mail->Body    = $message;
+                    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+                
+                    $mail->send();
+                } catch (Exception $e) {
+                    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                }
                 ?>
                     <div class="confirmation-flex">
                         <img src="img/checkmark.jpg" alt="checkmark" class="confirmation-img">

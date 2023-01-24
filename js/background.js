@@ -1,6 +1,5 @@
-//Hintergrund ändern
 window.onload=function() {
-    var currentTime = new Date().getHours(), img="";
+    var currentTime = new Date().getHours();
     if (5 <= currentTime && currentTime < 11) {
         img="img/wasser.png";
         imgLogo="img/logo_tag.jpg";
@@ -17,6 +16,9 @@ window.onload=function() {
     }
     document.body.style.backgroundImage='url('+img +')';
     document.getElementById("logo").src=''+imgLogo+'';
-    btn.classList.remove='bg';
-    btn.classList.add='dark-bg';
+    document.getElementsByClassName("btn").style.backgroundColor='#'+bgColor+'';
 }
+
+
+
+

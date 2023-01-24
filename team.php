@@ -14,12 +14,12 @@
     <?php
         require_once "header.php";
     ?>  
-    <div class="text-container">
+    <div class="text-container" style="width:40%;">
         <p class="p">
             Unser Team
             <br><br>
             Hier finden Sie eine Kurze Info über unser Team und über
-            die Webseite. Unsere Webseite wurde am xx.xx.xx
+            die Webseite. Unsere Webseite wurde am 20.12.2022
             veröffentlicht. Unser Name setzt sich zusammen aus unseren 
             Anfangsbuchstaben der Inhaber. AKB, Alex Konstantin Benedik
             sind die Hinhaber der Webseite.
@@ -31,8 +31,5 @@
             Benedik Hidalgo ebenfalls Stellverträtender CEO  
         </p>
     </div>
-    <?php
-        echo "<script>alert(\"TEST\");</script>";
-    ?>
 </body>
 </html>
