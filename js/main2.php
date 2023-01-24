@@ -1,13 +1,17 @@
 <?php
-    $conn = new PDO("mysql: host=localhost; dbname=wetterstation;","root");
+    $conn = new PDO("mysql: host=localhost; dbname=wetterstation;","root", "wetterstation22");
 
-    $stmt_select = "SELECT Temperatur, Luftfeuchtigkeit FROM Daten;";
+    $stmt_select = "SELECT Temperatur, Luftfeuchtigkeit, Zeitpunkt FROM Daten;";
     $cmd_select = $conn->prepare($stmt_select);
 
     $cmd_select->execute();
     $temp_arr = array();
-    while (($record = $cmd_select->fetch()) != FALSE) {
+    $time_arr = array();
+    $i=0;
+    while (($record = $cmd_select->fetch()) != FALSE & $i<7) {
         array_push($temp_arr, $record["Temperatur"]);
+        array_push($time_arr, $record["Zeitpunkt"]);
+        $i++;
     }
 ?>
 <script>
@@ -50,16 +54,13 @@ function getGradientLuft(ctx, chartArea) {
 }
 
 const labels = [
-    "Montag",
-    "Dienstag",
-    "Mittwoch",
-    "Donnerstag",
-    "Fretiag",
-    "Samstag",
-    "Sonntag",
-    "Montag",
-    "Dienstag",
-];
+<?php
+    echo '"';
+    echo json_encode(print_r(implode('", "',$time_arr)));
+    echo '"';
+?>
+]
+
 
 const data = {
     labels,
@@ -113,8 +114,6 @@ const config = {
                 ticks: {
                     color:"#FFFFFF"
                 },
-                suggestedMin: 21,
-                suggestedMax: 26,
             },
             x: {
                 grid: {

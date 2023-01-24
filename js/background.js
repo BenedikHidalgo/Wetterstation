@@ -11,14 +11,10 @@ window.onload=function() {
         imgLogo="img/logo_tag.jpg";
         bgColor="#00000094";
     } else {
-        img="img/rentiere.jpg";
+        img="img/rentier.png";
         bgColor="#00000094";
     }
     document.body.style.backgroundImage='url('+img +')';
     document.getElementById("logo").src=''+imgLogo+'';
     document.getElementsByClassName("btn").style.backgroundColor='#'+bgColor+'';
 }
-
-
-
-

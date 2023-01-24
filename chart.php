@@ -25,6 +25,8 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/main.js"></script>
+    <?php
+        require_once "js/main2.php";
+    ?>
 </body>
 </html>
