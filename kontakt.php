@@ -23,6 +23,7 @@
     <?php
         if (isset($_POST["btn"])) {
             if (!empty($_POST["vorname"]) && !empty($_POST["nachname"]) && !empty($_POST["mail"]) && !empty($_POST["feedback"])) {
+                //Daten vom Formular
                 $to = "benedik.hidalgo@gmail.com";
                 $name = $_POST["vorname"];
                 $surname = $_POST["nachname"];
@@ -39,24 +40,21 @@
                 $mail = new PHPMailer(true);
 
                 try {
-                    //Send using SMTP
                     $mail->isSMTP();
-                    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-                    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                    $mail->Username   = 'hidalgo.benedik@gmail.com';                     //SMTP username
-                    $mail->Password   = 'iffzrqzsxffuiarv';                               //SMTP password
-                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-                    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                    $mail->Host       = 'smtp.gmail.com';                     
+                    $mail->SMTPAuth   = true;                               
+                    $mail->Username   = 'hidalgo.benedik@gmail.com'; //Mail wo das Feedback landen wird                 
+                    $mail->Password   = 'iffzrqzsxffuiarv'; //App-Key von Gmail                               
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
+                    $mail->Port       = 465;                                    
                 
                     $message = "Name: ".$name." ".$surname."<br>"."Email: ".$from."<br><br>".$message;
 
-                    //Recipients
-                    $mail->setFrom('from@example.com', 'Wetterstation-Feedback');
-                    $mail->addAddress('hidalgo.benedik@gmail.com');     //Add a recipient
+                    $mail->setFrom("$from", 'Wetterstation-Feedback');
+                    $mail->addAddress('hidalgo.benedik@gmail.com');     
                 
-                    //Content
-                    $mail->isHTML(true);                                  //Set email format to HTML
-                    $mail->Subject = 'Here is the subject';
+                    $mail->isHTML(true);                                  
+                    $mail->Subject = 'Feedback von der Wetterstation'; //Betreff
                     $mail->Body    = $message;
                     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
                 
